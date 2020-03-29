@@ -4,11 +4,11 @@ namespace check_identifier
 {
     public class Program
     {
-        static bool is_letter(char ch)
+        public static bool is_letter(char ch)
         {
             return (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z');
         }
-        static bool is_digit(char ch)
+        public static bool is_digit(char ch)
         {
             return (ch >= '0' && ch <= '9');
         }

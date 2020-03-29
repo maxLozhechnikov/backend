@@ -54,5 +54,37 @@ namespace check_identifier_tests
             min = Program.Main(wrong1);
             Assert.AreEqual(1, min);
         }
+        [TestMethod]
+        public void checkLetter_correctInput_return0()
+        {
+            char wrong1 = 'a';
+            bool min;
+            min = Program.is_letter(wrong1);
+            Assert.AreEqual(true, min);
+        }
+        [TestMethod]
+        public void checkLetter_incorrectInput_returnErr()
+        {
+            char wrong1 = '1';
+            bool min;
+            min = Program.is_letter(wrong1);
+            Assert.AreEqual(false, min);
+        }
+        [TestMethod]
+        public void checkDigitr_correctInput_return0()
+        {
+            char wrong1 = '1';
+            bool min;
+            min = Program.is_digit(wrong1);
+            Assert.AreEqual(true, min);
+        }
+        [TestMethod]
+        public void checkDigitr_incorrectInput_returnErr()
+        {
+            char wrong1 = 'a';
+            bool min;
+            min = Program.is_digit(wrong1);
+            Assert.AreEqual(false, min);
+        }
     }
 }
