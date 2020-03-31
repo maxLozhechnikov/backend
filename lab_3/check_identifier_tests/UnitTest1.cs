@@ -9,81 +9,81 @@ namespace check_identifier_tests
         [TestMethod]
         public void numberInBegging_numberInStartOfInput_renutrErr()
         {
-            string[] wrong1 = new string[1] { "4qwerty" };
+            string[] number_first = new string[1] { "4qwerty" };
             int min;
-            min = Program.Main(wrong1);
+            min = Program.Main(number_first);
             Assert.AreEqual(1, min);
         }
         [TestMethod]
         public void incorrectSymbol_unexpectedSymbolInInput_returnErr()
         {
-            string[] wrong1 = new string[1] { "werty^tt" };
+            string[] incorrect_symbol = new string[1] { "werty^tt" };
             int min;
-            min = Program.Main(wrong1);
+            min = Program.Main(incorrect_symbol);
             Assert.AreEqual(1, min);
         }
         [TestMethod]
         public void normalWork_correctInput_return0()
         {
-            string[] wrong1 = new string[1] { "qwerty567" };
+            string[] normal = new string[1] { "qwerty567" };
             int min;
-            min = Program.Main(wrong1);
+            min = Program.Main(normal);
             Assert.AreEqual(0, min);
         }
         [TestMethod]
         public void incorrectCountArguments_moreThenOneArgument_returnErr()
         {
-            string[] wrong1 = new string[2] { "qwertyu678", "7ghgnjh76" };
+            string[] more_arguments = new string[2] { "qwertyu678", "7ghgnjh76" };
             int min;
-            min = Program.Main(wrong1);
+            min = Program.Main(more_arguments);
             Assert.AreEqual(1, min);
         }
         [TestMethod]
         public void incorrectCountArguments_lessThenOneArgument_returnErr()
         {
-            string[] wrong1 = new string[0] { };
+            string[] less_arguments = new string[0] { };
             int min;
-            min = Program.Main(wrong1);
+            min = Program.Main(less_arguments);
             Assert.AreEqual(1, min);
         }
         [TestMethod]
         public void emptyString_emptyInput_returnErr()
         {
-            string[] wrong1 = new string[1] { "" };
+            string[] empty_string = new string[1] { "" };
             int min;
-            min = Program.Main(wrong1);
+            min = Program.Main(empty_string);
             Assert.AreEqual(1, min);
         }
         [TestMethod]
         public void checkLetter_correctInput_return0()
         {
-            char wrong1 = 'a';
+            char letter = 'a';
             bool min;
-            min = Program.is_letter(wrong1);
+            min = Program.is_letter(letter);
             Assert.AreEqual(true, min);
         }
         [TestMethod]
         public void checkLetter_incorrectInput_returnErr()
         {
-            char wrong1 = '1';
+            char number = '1';
             bool min;
-            min = Program.is_letter(wrong1);
+            min = Program.is_letter(number);
             Assert.AreEqual(false, min);
         }
         [TestMethod]
         public void checkDigitr_correctInput_return0()
         {
-            char wrong1 = '1';
+            char number = '1';
             bool min;
-            min = Program.is_digit(wrong1);
+            min = Program.is_digit(number);
             Assert.AreEqual(true, min);
         }
         [TestMethod]
         public void checkDigitr_incorrectInput_returnErr()
         {
-            char wrong1 = 'a';
+            char letter = 'a';
             bool min;
-            min = Program.is_digit(wrong1);
+            min = Program.is_digit(letter);
             Assert.AreEqual(false, min);
         }
     }
