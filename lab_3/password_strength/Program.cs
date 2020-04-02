@@ -165,7 +165,7 @@ namespace PasswordStrength
         public static int CalculatePasswordStrength(string Password)
         {
             int strength = 0;
-            strength = strength + SecondStep(Password) + ThirdStep(Password) + ForthStep(Password) + FifthStep(Password) + SixthAndSeventhStep(Password) + EighthStep(Password);
+            strength = strength + SecondStep(Password) + ThirdStep(Password) + ForthStep(Password) + FifthStep(Password) - SixthAndSeventhStep(Password) - EighthStep(Password);
             return strength;
         }
     }
